@@ -1,0 +1,319 @@
+.container {
+  background: var(--dark-yellow-color);
+  padding: 20px;
+  font-family: var(--inter-font);
+}
+
+.steps {
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+
+}
+
+.steps h4 {
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+.steps p {
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.steps hr {
+  border: 0.5px solid #000;
+  outline: 0;
+  width: 90%;
+  margin-top: -12px;
+}
+
+.steps div {
+  width: 160px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+/* ======================Pick influencer type============ */
+
+.pickInfluencer {
+  text-align: center;
+  margin-top: 34px;
+  font-size: 26px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.pickInfluencerType {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  justify-content: space-between;
+
+  margin: 0;
+}
+
+.pickInfluencerType div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-left: 0.5px solid #000;
+  padding: 8px 0;
+  gap: 10px;
+}
+
+.pickInfluencerType div p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.pickInfluencerType div h3 {
+  font-weight: 400;
+  margin: 0;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.pickInfluencerType div:first-child {
+  border: 0;
+}
+
+/* ================influencerContent============== */
+
+.influencerContent {
+  background: #fff;
+  padding: 10px;
+  margin-top: 24px;
+}
+
+
+.influencerContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.selectNo {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  padding: 0 20px;
+  border-radius: 50px;
+}
+
+.selectNo div {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.selectNo div span {
+  position: absolute;
+  font-size: 14px;
+  background: #000;
+  color: #fff;
+  padding: 2px 6px;
+  top: -7px;
+  border-radius: 20px;
+}
+
+.selectNo p {
+  background: rgb(222, 222, 222);
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  margin-bottom: 8px;
+}
+
+.nanoInfluencers {
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 22px;
+  margin-bottom: 0;
+}
+
+.followers {
+  margin-top: -10px;
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+/* ===============pricingList============ */
+
+.pricingList {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #000;
+  padding: 10px;
+  border-radius: 15px;
+  margin: 20px;
+}
+
+.calculations {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  border-bottom: 2px solid #000;
+  font-weight: 500;
+}
+
+.pricingValues {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pricingValues div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.pricingValues img {
+  width: 30px;
+}
+
+.pricingValues p {
+  font-size: 20px;
+}
+
+.pricingValues span {
+  color: var(--green-color);
+}
+
+.totalGreen {
+  color: var(--green-color);
+
+}
+
+.totalPriceValue {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.totalPriceValue div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.totalPriceValue2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.totalPriceValue2 div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+}
+
+.totalPriceValue img {
+  width: 30px;
+}
+
+.totalPriceValue p {
+  margin: 0;
+  font-size: 20px;
+}
+
+.totalPriceValue2 p {
+  margin: 0;
+  font-size: 12px;
+  margin-top: -8px;
+}
+
+.totalPriceValue2 p:first-child {
+  margin-left: 36px;
+  font-size: 14px;
+
+}
+
+.savings {
+  font-weight: 400;
+  background: rgba(0, 0, 0, 0.15);
+  padding: 8px 20px;
+  border-radius: 50px;
+  margin-top: 0px;
+}
+
+.savings span {
+  color: var(--green-color);
+}
+
+/* ======whatsapp==== */
+
+.whatsapp {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.whatsapp p {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+.whatsapp img {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+/* ========Gst========== */
+
+.Gst {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Gst img {
+  width: 200px;
+}
+
+.Gst p {
+  margin-top: 5px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+/* ========recognization========== */
+
+.recognization h2 {
+  text-align: center;
+  background: #fff;
+  margin: 20px 50px;
+  padding: 8px;
+  border-radius: 50px;
+  font-weight: 500;
+  font-size: 22px;
+}
+
+.recognization div {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 15px;
+  place-items: center;
+}
