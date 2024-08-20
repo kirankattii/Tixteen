@@ -26,10 +26,12 @@
 }
 
 .steps hr {
-  border: 0.5px solid #000;
+  border: 0.5px solid #aaaaaa;
+  opacity: 0.8;
   outline: 0;
   width: 90%;
   margin-top: -12px;
+
 }
 
 .steps div {
@@ -65,7 +67,7 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  border-left: 0.5px solid #000;
+  border-left: 0.5px solid #aaaa;
   padding: 8px 0;
   gap: 10px;
   border-radius: 10px;
@@ -80,7 +82,7 @@ cursor: pointer;
 .pickInfluencerType div h3 {
   font-weight: 400;
   margin: 0;
-  font-size: 17px;
+  font-size: 15px;
   font-weight: 500;
 }
 
@@ -94,6 +96,7 @@ cursor: pointer;
   background: #fff;
   padding: 10px;
   margin-top: 24px;
+  border-radius: 20px;
 }
 
 
@@ -106,9 +109,11 @@ cursor: pointer;
 }
 
 .selectNo {
+  width: 86%;
   display: flex;
   align-items: center;
-  gap: 60px;
+  /* gap: 60px; */
+  justify-content: space-between;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   padding: 0 20px;
   border-radius: 50px;
@@ -156,6 +161,20 @@ cursor: pointer;
   font-size: 13px;
   color: rgba(0, 0, 0, 0.7);
 }
+.popularLabel{
+  position: absolute;
+  top: -55px;
+  background: #000;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 20px;
+}
+.active
+,
+.inactive{
+  position: relative;
+}
+
 
 /* ===============pricingList============ */
 
@@ -272,16 +291,28 @@ cursor: pointer;
   display: flex;
   align-items: center;
   gap: 10px;
+  background: #1BA553;
+  justify-content: center;
+  margin: auto;
+  padding: 10px 20px;
+  border-radius: 50px;
+  cursor: pointer;
 }
 
 .whatsapp p {
-  margin-top: 0;
-  font-size: 18px;
+  /* margin-top: 0; */
+  font-size: 24px;
+  color: #fff;
+  padding: 0;
+  margin: 0;
 }
 
 .whatsapp img {
   margin-top: 0;
-  margin-bottom: 12px;
+  /* margin-bottom: 12px; */
+  padding: 0;
+  margin: 0;
+  width: 30px;
 }
 
 /* ========Gst========== */
@@ -397,4 +428,25 @@ cursor: pointer;
     border-top-color: #fff; /* Match pointer color with the active background */
 
     
+}
+
+.active{
+ background: linear-gradient(45deg, #ff6b6b, #f5f7fa); /* Example gradient */
+  border: 4px dotted #ff6b6b; /* Match the gradient color or choose another */
+  color: #000; /* White text color for better contrast */
+  padding: 10px;
+  border-radius: 8px; /* Rounded corners for better appearance */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Add shadow for better text visibility */
+  font-weight: bold; /* Make the text bold */
+  font-size: 16px; /* Adjust font size */
+}
+.active span{
+  border: 1px solid #7b7b7b;
+  padding: 12px;
+ margin-left: 1px;
+ margin-bottom: 0.5px;
+  height: 10px;
+  width: 10px;
+  display: flex;align-items: center;justify-content: center;
+  border-radius: 50%;
 }

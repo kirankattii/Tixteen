@@ -77,3 +77,8 @@ code {
 body {
   /* background: #000; */
 }
+
+a{
+  text-decoration: none;
+  color: inherit;
+}

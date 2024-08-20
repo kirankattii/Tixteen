@@ -1,274 +1,236 @@
-import { useState } from "react"
-import { assects, brands } from "../assets/assect"
-import Navbar from "../components/Navbar"
-import { plans } from "../constants/constants"
-import styles from "./influencer.module.css"
+// import { useState } from "react"
+// import { assects, brands } from "../assets/assect"
+// import Navbar from "../components/Navbar"
+// import styles from "./influencer.module.css"
 
-const steps = [
-	{
-		steps: "STEP 1",
-		title: "pick influencers type",
-	},
-	{
-		steps: "STEP 2",
-		title: "pick influencers video",
-	},
-	{
-		steps: "STEP 3",
-		title: "submit request",
-	},
-]
+// const steps = [
+// 	{
+// 		steps: "STEP 1",
+// 		title: "pick influencers type",
+// 	},
+// 	{
+// 		steps: "STEP 2",
+// 		title: "pick influencers video",
+// 	},
+// 	{
+// 		steps: "STEP 3",
+// 		title: "submit request",
+// 	},
+// ]
 
-const Influencer = () => {
-	const [selectedPlan, setSelectedPlan] = useState(3) // Default to Plan 1
-	const [selectedInfluencerType, setSelectedInfluencerType] = useState("nano") // Default to Nano
+// const influencerPricing = {
+// 	nano: 4000,
+// 	micro: 8000,
+// 	macro: 16000,
+// 	mega: 40000,
+// 	millionClub: 100000,
+// }
 
-	const handlePlanSelect = (planVideos) => {
-		setSelectedPlan(planVideos)
-	}
+// const discountPlans = [
+// 	{ videos: 3, discount: 0.15 },
+// 	{ videos: 10, discount: 0.18 },
+// 	{ videos: 25, discount: 0.22 },
+// 	{ videos: 50, discount: 0.25 },
+// 	{ videos: 100, discount: 0.3 },
+// ]
 
-	const handleInfluencerTypeSelect = (type) => {
-		setSelectedInfluencerType(type)
-	}
+// const Influencer = () => {
+// 	const [selectedPlan, setSelectedPlan] = useState(3) // Default to Plan 1
+// 	const [selectedInfluencerType, setSelectedInfluencerType] = useState("nano") // Default to Nano
 
-	const selectedData = plans.find((plan) => plan.videos === selectedPlan)
-	return (
-		<>
-			<Navbar />
-			<div className={styles.container}>
-				<div className={styles.mainContainer}>
-					<div className={styles.steps}>
-						<div>
-							<h4>STEP 1</h4>
-							<hr />
-							<p>pick influencers type</p>
-						</div>
-						<div>
-							<h4>STEP 2</h4>
-							<hr />
-							<p>pick influencers video</p>
-						</div>
-						<div>
-							<h4>STEP 2</h4>
-							<hr />
-							<p>
-								submit <br /> request
-							</p>
-						</div>
-					</div>
-					{/* =========Pick influencer type=============== */}
-					<h2 className={styles.pickInfluencer}>Pick influencer type</h2>
-					<div className={styles.pickInfluencerType}>
-						<div
-							className={`${styles.influencerTypeBox} ${
-								selectedInfluencerType === "nano" ? styles.active1 : ""
-							}`}
-							onClick={() => handleInfluencerTypeSelect("nano")}
-						>
-							<h3>Nano</h3>
-							<p>
-								{"<"}
-								<span>20</span>K
-							</p>
-						</div>
-						<div
-							className={`${styles.influencerTypeBox} ${
-								selectedInfluencerType === "micro" ? styles.active1 : ""
-							}`}
-							onClick={() => handleInfluencerTypeSelect("micro")}
-						>
-							<h3>Micro</h3>
-							<p>
-								{"<"}
-								<span>100</span>K
-							</p>
-						</div>
-						<div
-							className={`${styles.influencerTypeBox} ${
-								selectedInfluencerType === "macro" ? styles.active1 : ""
-							}`}
-							onClick={() => handleInfluencerTypeSelect("macro")}
-						>
-							<h3>Macro</h3>
-							<p>
-								{"<"}
-								<span>500</span>K
-							</p>
-						</div>
-						<div
-							className={`${styles.influencerTypeBox} ${
-								selectedInfluencerType === "mega" ? styles.active1 : ""
-							}`}
-							onClick={() => handleInfluencerTypeSelect("mega")}
-						>
-							<h3>Mega</h3>
-							<p>
-								{"<"}
-								<span>1</span>M
-							</p>
-						</div>{" "}
-						<div
-							className={`${styles.influencerTypeBox} ${
-								selectedInfluencerType === "millionClub" ? styles.active1 : ""
-							}`}
-							onClick={() => handleInfluencerTypeSelect("millionClub")}
-						>
-							<h3>M Club</h3>
-							<p>
-								{">"}
-								<span>1</span>M
-							</p>
-						</div>
-					</div>
-					{/* =============Total influencers Videos+============ */}
-					<div className={styles.influencerContent}>
-						<h2>Total influencers Videos</h2>
-						<div className={styles.selectNo}>
-							<p
-								className={selectedPlan === 3 ? styles.active : ""}
-								onClick={() => handlePlanSelect(3)}
-							>
-								3
-							</p>
-							<p
-								className={selectedPlan === 10 ? styles.active : ""}
-								onClick={() => handlePlanSelect(10)}
-							>
-								10
-							</p>
-							<p
-								className={selectedPlan === 25 ? styles.active : ""}
-								onClick={() => handlePlanSelect(25)}
-							>
-								25
-							</p>
-							<div>
-								<span>Popular</span>
-								<p
-									className={selectedPlan === 50 ? styles.active : ""}
-									onClick={() => handlePlanSelect(50)}
-								>
-									50
-								</p>
-							</div>
-							<p
-								className={selectedPlan === 100 ? styles.active : ""}
-								onClick={() => handlePlanSelect(100)}
-							>
-								100
-							</p>
-						</div>
-						<h2 className={styles.nanoInfluencers}>
-							{selectedInfluencerType.toUpperCase()} influencers
-						</h2>
-						<span className={styles.followers}>
-							{" "}
-							{
-								{
-									nano: "Less than 20K followers",
-									micro: "Less than 100K followers",
-									macro: "Less than 500K followers",
-									mega: "Less than 1M followers",
-									millionClub: "More than 1M followers",
-								}[selectedInfluencerType]
-							}
-						</span>
-						<div className={styles.pricingList}>
-							<div className={styles.calculations}>
-								<div className={styles.pricingValues}>
-									<div>
-										<img
-											src={assects.playIcon}
-											alt=""
-										/>
-										<p>Videos</p>
-									</div>
-									<p>
-										{selectedData.videos} X {selectedData.price}
-									</p>
-								</div>
-								<div className={styles.pricingValues}>
-									<div>
-										<img
-											src={assects.doller_icon}
-											alt=""
-										/>
-										<p>Value</p>
-									</div>
-									<p>{selectedData.reach.price}</p>
-								</div>
-								<div className={styles.pricingValues}>
-									<div>
-										<img
-											src={assects.discount_icon}
-											alt="Discount"
-										/>
-										<p>
-											Discount <span>({selectedData.discountPercentage}%)</span>
-										</p>
-									</div>
-									<p className={styles.totalGreen}>
-										{selectedData.reach.discount}
-									</p>
-								</div>
-							</div>
-							<div className={styles.totalCalculation}>
-								<div className={styles.totalPriceValue}>
-									<div className={styles.offeredPrice}>
-										<img
-											src={assects.etimateIcon}
-											alt=""
-										/>
-										<p>Offered Price</p>
-									</div>
-									<p>{selectedData.reach.finalPrice}</p>
-								</div>
-								<div className={styles.totalPriceValue2}>
-									<p>Per Video</p>
-									<p>{selectedData.reach.perVideoCost}</p>
-								</div>
-							</div>
-						</div>
-						<h3 className={styles.savings}>
-							You Saved <span>₹{selectedData.reach.discount}</span> with this
-							plan
-						</h3>
-						<div className={styles.whatsapp}>
-							<p> Send request via What's App</p>
-							<img
-								src={assects.whatsapp_icon}
-								alt=""
-							/>
-						</div>
-						<div className={styles.Gst}>
-							<img
-								src={assects.tixteenGif}
-								alt=""
-							/>
-							<p>18% GST will be applied on final price</p>
-						</div>
-					</div>
+// 	// Calculate the base price, discount, and final offered price
+// 	const basePrice = influencerPricing[selectedInfluencerType]
+// 	const selectedDiscountPlan = discountPlans.find(
+// 		(plan) => plan.videos === selectedPlan
+// 	)
+// 	const discount = selectedDiscountPlan ? selectedDiscountPlan.discount : 0
+// 	const totalValue = basePrice * selectedPlan
+// 	const discountAmount = totalValue * discount
+// 	const offeredPrice = totalValue - discountAmount
+// 	const perVideoPrice = offeredPrice / selectedPlan
 
-					{/* ==================Widely recognized by=========== */}
-					<div className={styles.recognization}>
-						<h2>Widely recognized by</h2>
-						<div>
-							{brands.map((img, index) => (
-								<img
-									src={img}
-									key={index}
-									alt=""
-								/>
-							))}
-						</div>
-					</div>
-				</div>
-			</div>
-		</>
-	)
-}
+// 	return (
+// 		<>
+// 			<Navbar />
+// 			<div className={styles.container}>
+// 				<div className={styles.mainContainer}>
+// 					<div className={styles.steps}>
+// 						<div>
+// 							<h4>STEP 1</h4>
+// 							<hr />
+// 							<p>pick influencers type</p>
+// 						</div>
+// 						<div>
+// 							<h4>STEP 2</h4>
+// 							<hr />
+// 							<p>pick influencers video</p>
+// 						</div>
+// 						<div>
+// 							<h4>STEP 2</h4>
+// 							<hr />
+// 							<p>
+// 								submit <br /> request
+// 							</p>
+// 						</div>
+// 					</div>
+// 					{/* =========Pick influencer type=============== */}
+// 					<h2 className={styles.pickInfluencer}>Pick influencer type</h2>
+// 					<div className={styles.pickInfluencerType}>
+// 						<div>
+// 							<h3>Nano</h3>
+// 							<p>
+// 								{"<"}
+// 								<span>20</span>K
+// 							</p>
+// 						</div>
+// 						<div>
+// 							<h3>Micro</h3>
+// 							<p>
+// 								{"<"}
+// 								<span>100</span>K
+// 							</p>
+// 						</div>
+// 						<div>
+// 							<h3>Macro</h3>
+// 							<p>
+// 								{"<"}
+// 								<span>500</span>K
+// 							</p>
+// 						</div>
+// 						<div>
+// 							<h3>Mega</h3>
+// 							<p>
+// 								{"<"}
+// 								<span>1</span>M
+// 							</p>
+// 						</div>{" "}
+// 						<div>
+// 							<h3>M Club</h3>
+// 							<p>
+// 								{">"}
+// 								<span>1</span>M
+// 							</p>
+// 						</div>
+// 					</div>
+// 					{/* =============Total influencers Videos+============ */}
+// 					<div className={styles.influencerContent}>
+// 						<h2>Total influencers Videos</h2>
+// 						<div className={styles.selectNo}>
+// 							<p>3</p>
+// 							<p>10</p>
+// 							<p>25</p>
+// 							<div>
+// 								<span>Popular</span>
+// 								<p>50</p>
+// 							</div>
+// 							<p>100</p>
+// 						</div>
+// 						<h2 className={styles.nanoInfluencers}>
+// 							{selectedInfluencerType.toUpperCase()} influencers
+// 						</h2>
+// 						<span className={styles.followers}>
+// 							{" "}
+// 							{
+// 								{
+// 									nano: "Less than 20K followers",
+// 									micro: "Less than 100K followers",
+// 									macro: "Less than 500K followers",
+// 									mega: "Less than 1M followers",
+// 									millionClub: "More than 1M followers",
+// 								}[selectedInfluencerType]
+// 							}
+// 						</span>
+// 						<div className={styles.pricingList}>
+// 							<div className={styles.calculations}>
+// 								<div className={styles.pricingValues}>
+// 									<div>
+// 										<img
+// 											src={assects.playIcon}
+// 											alt=""
+// 										/>
+// 										<p>Videos</p>
+// 									</div>
+// 									<p>3 X 4,000</p>
+// 								</div>
+// 								<div className={styles.pricingValues}>
+// 									<div>
+// 										<img
+// 											src={assects.doller_icon}
+// 											alt=""
+// 										/>
+// 										<p>Value</p>
+// 									</div>
+// 									<p>12,000</p>
+// 								</div>
+// 								<div className={styles.pricingValues}>
+// 									<div>
+// 										<img
+// 											src={assects.discount_icon}
+// 											alt="Discount"
+// 										/>
+// 										<p>
+// 											Discount <span>(15%)</span>
+// 										</p>
+// 									</div>
+// 									<p className={styles.totalGreen}>1,800</p>
+// 								</div>
+// 							</div>
+// 							<div className={styles.totalCalculation}>
+// 								<div className={styles.totalPriceValue}>
+// 									<div className={styles.offeredPrice}>
+// 										<img
+// 											src={assects.etimateIcon}
+// 											alt=""
+// 										/>
+// 										<p>Offered Price</p>
+// 									</div>
+// 									<p>10,200</p>
+// 								</div>
+// 								<div className={styles.totalPriceValue2}>
+// 									<p>Per Video</p>
+// 									<p>3400</p>
+// 								</div>
+// 							</div>
+// 						</div>
+// 						<h3 className={styles.savings}>
+// 							You Saved <span>₹1800</span> with this plan
+// 						</h3>
+// 						<div className={styles.whatsapp}>
+// 							<p> Send request</p>
+// 							<img
+// 								src={assects.whatsapp_icon}
+// 								alt=""
+// 							/>
+// 						</div>
+// 						<div className={styles.Gst}>
+// 							<img
+// 								src={assects.tixteenGif}
+// 								alt=""
+// 							/>
+// 							<p>18% GST will be applied on final price</p>
+// 						</div>
+// 					</div>
 
-export default Influencer
+// 					{/* ==================Widely recognized by=========== */}
+// 					<div className={styles.recognization}>
+// 						<h2>Widely recognized by</h2>
+// 						<div>
+// 							{brands.map((img, index) => (
+// 								<img
+// 									src={img}
+// 									key={index}
+// 									alt=""
+// 								/>
+// 							))}
+// 						</div>
+// 					</div>
+// 				</div>
+// 			</div>
+// 		</>
+// 	)
+// }
+
+// export default Influencer
 
 // import React, { useState } from "react"
 // import styles from "./influencer.module.css"
@@ -511,3 +473,229 @@ export default Influencer
 // }
 
 // export default Influencer
+
+import { useState } from "react"
+import { assects, brands } from "../assets/assect"
+import Navbar from "../components/Navbar"
+import styles from "./influencer.module.css"
+
+const steps = [
+	{
+		steps: "STEP 1",
+		title: "pick influencers type",
+	},
+	{
+		steps: "STEP 2",
+		title: "pick influencers video",
+	},
+	{
+		steps: "STEP 3",
+		title: "submit request",
+	},
+]
+
+const influencerPricing = {
+	nano: { price: 4000, followers: "<20K" },
+	micro: { price: 8000, followers: "<100K" },
+	macro: { price: 16000, followers: "<500K" },
+	mega: { price: 40000, followers: "<1M" },
+	millionClub: { price: 100000, followers: ">1M" },
+}
+const discountPlans = [
+	{ videos: 3, discount: 0.15 },
+	{ videos: 10, discount: 0.18 },
+	{ videos: 25, discount: 0.22 },
+	{ videos: 50, discount: 0.25 },
+	{ videos: 100, discount: 0.3 },
+]
+
+const Influencer = () => {
+	const [selectedPlan, setSelectedPlan] = useState(3) // Default to 3 videos
+	const [selectedInfluencerType, setSelectedInfluencerType] = useState("nano") // Default to Nano
+
+	// Calculate the base price, discount, and final offered price
+	const basePrice = influencerPricing[selectedInfluencerType].price
+	const selectedDiscountPlan = discountPlans.find(
+		(plan) => plan.videos === selectedPlan
+	)
+	const discount = selectedDiscountPlan ? selectedDiscountPlan.discount : 0
+	const totalValue = basePrice * selectedPlan
+	const discountAmount = totalValue * discount
+	const offeredPrice = totalValue - discountAmount
+	const perVideoPrice = offeredPrice / selectedPlan
+
+	const message = `Selected Influencer Type: ${selectedInfluencerType.toUpperCase()}
+Number of Videos: ${selectedPlan}
+Base Price per Video: ₹${basePrice.toLocaleString()}
+Total Calculation: ₹${totalValue.toLocaleString()}
+Discount: ₹${discountAmount.toLocaleString()}
+Offered Price: ₹${offeredPrice.toLocaleString()}
+Price Per Video: ₹${perVideoPrice.toFixed(0)}`
+
+	const whatsappLink = `https://wa.me/919113099868?text=${encodeURIComponent(
+		message
+	)}`
+
+	return (
+		<>
+			<Navbar />
+			<div className={styles.container}>
+				<div className={styles.mainContainer}>
+					<div className={styles.steps}>
+						{steps.map((step, index) => (
+							<div key={index}>
+								<h4>{step.steps}</h4>
+								<hr />
+								<p>{step.title}</p>
+							</div>
+						))}
+					</div>
+
+					{/* Pick influencer type */}
+					<h2 className={styles.pickInfluencer}>Pick influencer type</h2>
+					<div className={styles.pickInfluencerType}>
+						{Object.keys(influencerPricing).map((type) => (
+							<div
+								key={type}
+								onClick={() => setSelectedInfluencerType(type)}
+								className={`${styles.influencerTypeBox}
+									${type === selectedInfluencerType ? styles.active1 : ""}
+								`}
+							>
+								<h3>{type.charAt(0).toUpperCase() + type.slice(1)}</h3>
+								<p>{influencerPricing[type].followers}</p>
+							</div>
+						))}
+					</div>
+
+					{/* Total influencers Videos */}
+					<div className={styles.influencerContent}>
+						<h2>Total influencers Videos</h2>
+						<div className={styles.selectNo}>
+							{discountPlans.map((plan) => (
+								<p
+									key={plan.videos}
+									onClick={() => setSelectedPlan(plan.videos)}
+									className={
+										plan.videos === selectedPlan
+											? styles.active
+											: styles.inactive
+									}
+								>
+									{" "}
+									{plan.videos === 50 && (
+										<h5 className={styles.popularLabel}>Popular</h5>
+									)}
+									<span> {plan.videos}</span>
+								</p>
+							))}
+						</div>
+
+						<h2 className={styles.nanoInfluencers}>
+							{selectedInfluencerType.toUpperCase()} influencers
+						</h2>
+						<span className={styles.followers}>
+							{influencerPricing[selectedInfluencerType].followers} followers
+						</span>
+
+						<div className={styles.pricingList}>
+							<div className={styles.calculations}>
+								<div className={styles.pricingValues}>
+									<div>
+										<img
+											src={assects.playIcon}
+											alt="Videos"
+										/>
+										<p>Videos</p>
+									</div>
+									<p>{`${selectedPlan} X ${basePrice}`}</p>
+								</div>
+								<div className={styles.pricingValues}>
+									<div>
+										<img
+											src={assects.doller_icon}
+											alt="Value"
+										/>
+										<p>Value</p>
+									</div>
+									<p>{`₹${totalValue.toLocaleString()}`}</p>
+								</div>
+								<div className={styles.pricingValues}>
+									<div>
+										<img
+											src={assects.discount_icon}
+											alt="Discount"
+										/>
+										<p>
+											Discount <span>({(discount * 100).toFixed(0)}%)</span>
+										</p>
+									</div>
+									<p
+										className={styles.totalGreen}
+									>{`₹${discountAmount.toLocaleString()}`}</p>
+								</div>
+							</div>
+							<div className={styles.totalCalculation}>
+								<div className={styles.totalPriceValue}>
+									<div className={styles.offeredPrice}>
+										<img
+											src={assects.etimateIcon}
+											alt="Offered Price"
+										/>
+										<p>Offered Price</p>
+									</div>
+									<p>{`₹${offeredPrice.toLocaleString()}`}</p>
+								</div>
+								<div className={styles.totalPriceValue2}>
+									<p>Per Video</p>
+									<p>{`₹${perVideoPrice.toFixed(0)}`}</p>
+								</div>
+							</div>
+						</div>
+
+						<h3 className={styles.savings}>
+							You Saved <span>{`₹${discountAmount.toLocaleString()}`}</span>{" "}
+							with this plan
+						</h3>
+						<a
+							href={whatsappLink}
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<div className={styles.whatsapp}>
+								<p>Send request</p>
+								<img
+									src={assects.whatsapp_icon}
+									alt="WhatsApp"
+								/>
+							</div>
+						</a>
+						<div className={styles.Gst}>
+							<img
+								src={assects.tixteenGif}
+								alt="GST"
+							/>
+							<p>18% GST will be applied on final price</p>
+						</div>
+					</div>
+
+					{/* Widely recognized by */}
+					<div className={styles.recognization}>
+						<h2>Widely recognized by</h2>
+						<div>
+							{brands.map((img, index) => (
+								<img
+									src={img}
+									key={index}
+									alt=""
+								/>
+							))}
+						</div>
+					</div>
+				</div>
+			</div>
+		</>
+	)
+}
+
+export default Influencer
