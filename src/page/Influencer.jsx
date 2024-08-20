@@ -524,7 +524,9 @@ const Influencer = () => {
 	const offeredPrice = totalValue - discountAmount
 	const perVideoPrice = offeredPrice / selectedPlan
 
-	const message = `Selected Influencer Type: ${selectedInfluencerType.toUpperCase()}
+	const message = `
+*Hi I am interested in this plan:*
+Selected Influencer Type: ${selectedInfluencerType.toUpperCase()}
 Number of Videos: ${selectedPlan}
 Base Price per Video: ₹${basePrice.toLocaleString()}
 Total Calculation: ₹${totalValue.toLocaleString()}
