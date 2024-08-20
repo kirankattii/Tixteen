@@ -138,6 +138,7 @@
   height: 24px;
   border-radius: 50%;
   margin-bottom: 8px;
+  cursor: pointer;
 }
 
 .nanoInfluencers {
@@ -316,4 +317,45 @@
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 15px;
   place-items: center;
+}
+
+.recognization div img {
+  width: 140px;
+}
+
+.active {
+  border: 5px solid transparent; /* Transparent border */
+  background: linear-gradient(to right, #f00, #00f); /* Gradient background */
+  background-clip: border-box; /* Clip background to border box */
+  border-radius: 15px; /* Rounded corners */
+
+}
+
+
+
+.active {
+  position: relative;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 15px; /* Rounded corners */
+  z-index: 1;
+
+}
+
+.active::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background: linear-gradient(to right, #f00, #00f); /* Gradient border */
+  z-index: -1;
+  border-radius: 50%; /* Rounded corners */
+  background: #fff;
+  margin: 5px;
+}
+
+.active {
+ 
 }

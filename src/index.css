@@ -37,6 +37,7 @@ code {
   --blue-color: #1a50dc;
   --white-color: white;
   --black-color: black;
+  --linear-gradient:linear-gradient(176deg, rgba(146,148,224,1) 0%, rgba(250,153,12,1) 100%)
   /* --secondary-yellow-color:rgba(255,203,0,255); */
 }
 
