@@ -59,35 +59,60 @@ const Influencer = () => {
 					{/* =========Pick influencer type=============== */}
 					<h2 className={styles.pickInfluencer}>Pick influencer type</h2>
 					<div className={styles.pickInfluencerType}>
-						<div onClick={() => handleInfluencerTypeSelect("nano")}>
+						<div
+							className={`${styles.influencerTypeBox} ${
+								selectedInfluencerType === "nano" ? styles.active1 : ""
+							}`}
+							onClick={() => handleInfluencerTypeSelect("nano")}
+						>
 							<h3>Nano</h3>
 							<p>
 								{"<"}
 								<span>20</span>K
 							</p>
 						</div>
-						<div onClick={() => handleInfluencerTypeSelect("micro")}>
+						<div
+							className={`${styles.influencerTypeBox} ${
+								selectedInfluencerType === "micro" ? styles.active1 : ""
+							}`}
+							onClick={() => handleInfluencerTypeSelect("micro")}
+						>
 							<h3>Micro</h3>
 							<p>
 								{"<"}
 								<span>100</span>K
 							</p>
 						</div>
-						<div onClick={() => handleInfluencerTypeSelect("macro")}>
+						<div
+							className={`${styles.influencerTypeBox} ${
+								selectedInfluencerType === "macro" ? styles.active1 : ""
+							}`}
+							onClick={() => handleInfluencerTypeSelect("macro")}
+						>
 							<h3>Macro</h3>
 							<p>
 								{"<"}
 								<span>500</span>K
 							</p>
 						</div>
-						<div onClick={() => handleInfluencerTypeSelect("mega")}>
+						<div
+							className={`${styles.influencerTypeBox} ${
+								selectedInfluencerType === "mega" ? styles.active1 : ""
+							}`}
+							onClick={() => handleInfluencerTypeSelect("mega")}
+						>
 							<h3>Mega</h3>
 							<p>
 								{"<"}
 								<span>1</span>M
 							</p>
 						</div>{" "}
-						<div onClick={() => handleInfluencerTypeSelect("millionClub")}>
+						<div
+							className={`${styles.influencerTypeBox} ${
+								selectedInfluencerType === "millionClub" ? styles.active1 : ""
+							}`}
+							onClick={() => handleInfluencerTypeSelect("millionClub")}
+						>
 							<h3>M Club</h3>
 							<p>
 								{">"}

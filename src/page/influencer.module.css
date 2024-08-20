@@ -55,7 +55,7 @@
   align-items: center;
   background: #fff;
   justify-content: space-between;
-
+  border-radius: 10px;
   margin: 0;
 }
 
@@ -68,6 +68,8 @@
   border-left: 0.5px solid #000;
   padding: 8px 0;
   gap: 10px;
+  border-radius: 10px;
+cursor: pointer;
 }
 
 .pickInfluencerType div p {
@@ -100,6 +102,7 @@
   flex-direction: column;
   align-items: center;
   gap: 10px;
+
 }
 
 .selectNo {
@@ -356,6 +359,42 @@
   margin: 5px;
 }
 
-.active {
+.influencerTypeBox {
  
+    transition: all 0.3s ease-in-out;
+}
+
+/* Triangle pointer at the bottom */
+.influencerTypeBox::after {
+    content: '';
+    position: absolute;
+    bottom: -10px; /* Adjust position to fit the pointer below the box */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid white; /* Same color as the box background */
+}
+
+/* Active class to apply when selected */
+.active1 {
+    background-color: #fff; /* Yellow background */
+    color: #000; /* Text color */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+       position: relative;
+    padding: 16px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #fff; /* Set the background to white */
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 1); /* Subtle shadow for the box */
+    text-align: center;
+}
+
+/* Adjust the pointer color when active */
+.active1::after {
+    border-top-color: #fff; /* Match pointer color with the active background */
+
+    
 }
