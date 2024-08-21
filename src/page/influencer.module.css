@@ -276,10 +276,11 @@ cursor: pointer;
 
 .savings {
   font-weight: 400;
-  background: rgba(0, 0, 0, 0.15);
+  background: rgba(0, 0, 0, 0.12);
   padding: 8px 20px;
   border-radius: 50px;
   margin-top: 0px;
+  text-align: center;
 }
 
 .savings span {
