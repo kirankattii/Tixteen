@@ -4,7 +4,7 @@ import etimateIcon from "./Estimate icon.png"
 import logo from "./logo.png"
 import whatsapp_icon from "./whats icon.png"
 import ringIcon from "./ring_icon.png"
-import tixteenGif from "./GIF TIXTEEN.png"
+import tixteenGif from "./GIF TIXTEEN.gif"
 import playIcon from "./Play Button Circled.png"
 // import doller_icon from "./Dollar Coin.png"
 

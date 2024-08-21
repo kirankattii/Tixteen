@@ -213,7 +213,7 @@ cursor: pointer;
 }
 
 .pricingValues p {
-  font-size: 20px;
+  font-size: 19px;
 }
 
 .pricingValues span {
@@ -265,6 +265,7 @@ cursor: pointer;
   margin: 0;
   font-size: 12px;
   margin-top: -8px;
+  text-align: center;
 }
 
 .totalPriceValue2 p:first-child {
@@ -328,7 +329,7 @@ cursor: pointer;
 }
 
 .Gst p {
-  margin-top: 5px;
+  margin-top: -10px;
   font-size: 14px;
   color: rgba(0, 0, 0, 0.7);
 }

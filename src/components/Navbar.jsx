@@ -7,6 +7,7 @@ const Navbar = () => {
 			<img
 				src={assects.logo}
 				alt="logo"
+				style={{ padding: "4px 15px" }}
 			/>
 		</div>
 	)
