@@ -534,7 +534,7 @@ Discount: ₹${discountAmount.toLocaleString()}
 Offered Price: ₹${offeredPrice.toLocaleString()}
 Price Per Video: ₹${perVideoPrice.toFixed(0)}`
 
-	const whatsappLink = `https://wa.me/919113099868?text=${encodeURIComponent(
+	const whatsappLink = `https://wa.me/918360057380?text=${encodeURIComponent(
 		message
 	)}`
 
